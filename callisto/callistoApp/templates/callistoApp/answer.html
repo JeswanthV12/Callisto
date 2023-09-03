@@ -1,0 +1,60 @@
+{% extends "callistoApp/layout.html" %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+
+    <h1 class="center">Answers</h1>
+
+    <div class="card center2">
+        <div class="card-body">
+            <h5 class="card-title">{{ question.question }}</h5>
+            <p class="card-text b">User: {{ question.user }}</p>
+            <p class="card-text ba">Asked: {{ question.timestamp }}</p>
+        </div>
+    </div>
+
+    {% if user.is_authenticated and question.user != request.user %}
+        <div class="center">
+            <h4>Answer</h4>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group" id="form-div">
+                    {{ form.text|as_crispy_field }}
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+        </div>
+    {% endif %}
+
+    <div>
+        {% for answer in answers %}
+            <div class="card pad">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ answer.answer }}</h5>
+                    <p class="card-text b">User: {{ answer.user }}</p>
+                    <p class="card-text ba">Asked: {{ answer.timestamp }}</p>
+                </div>
+            </div>
+            <hr>
+        {% empty %}
+            <h3 class="center">There are no answers.</h3>
+        {% endfor %}
+    </div>
+
+    <div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                {% if answers.has_previous %}
+                    <li class="page-item"><a class="page-link" href="{% url 'answer' question.id %}?page={{answers.previous_page_number}}">Previous</a></li>
+                {% endif %}
+                {% if answers.has_next %}
+                    <li class="page-item"><a class="page-link" href="{% url 'answer' question.id %}?page={{answers.next_page_number}}">Next</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+
+{% endblock %}

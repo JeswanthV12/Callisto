@@ -1,0 +1,24 @@
+{% extends "callistoApp/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+    <div class="center">
+        <h1>Search Results for...</h1>
+        <h2>"{{ searched }}"</h2>
+    </div>
+    <div>
+        {% for question in questions %}
+            <div class="card pad">
+                <div class="card-header">Question: {{ question.id }}</div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ question.question }}</h5>
+                    <p class="card-text b">User: {{ question.user }}</p>
+                    <p class="card-text ba">Asked: {{ question.timestamp }}</p>
+                    <a href="{% url 'answer' question.id %}"><button class="btn btn-primary answer">See Answers</button></a>
+                </div>
+            </div>
+            <hr>
+        {% endfor %}
+    </div>
+{% endblock %}

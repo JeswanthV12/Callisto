@@ -1,0 +1,220 @@
+{% extends "callistoApp/layout.html" %}
+
+{% load static %}
+
+{% block body %}
+    <div class="center">
+        <h1><b>Astronomy 101</b></h1>
+        <div>
+            <h2 class="pad">Stars</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2HoTK_Gqi2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3mnSDifDSxQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/udFxKZRyQt4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LS-VPyLaJFM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qsN1LglrX9s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2 class="pad">Planets</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/libKVRa01L8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2 class="pad">Galaxies</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wsCedw3iBU0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EuJNVgcYEWU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div>
+            <h2 class="pad">Black Holes</h1>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0FH9cgRhQ-k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/QqsLTNkzvaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div id="test" class="pad">
+        <h1 class="center">Astronomy Quiz</h1>
+        <form id="test_form">
+            <div>
+                <h5>Question 1: How many planets are in our solar system? (excluding pluto)?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form1" id="form1Option1" value="8">
+                    <label class="form-check-label" for="form1Option1">8</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form1" id="form1Option2" value="5">
+                    <label class="form-check-label" for="form1Option2">5</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form1" id="form1Option3" value="9">
+                    <label class="form-check-label" for="form1Option3">9</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form1" id="form1Option4" value="7">
+                    <label class="form-check-label" for="form1Option4">7</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 2: Does Europa (one of jupiter's moon) have more water than Earth?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form2" id="form2Option1" value="False">
+                    <label class="form-check-label" for="form2Option1">False</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form2" id="form2Option2" value="True">
+                    <label class="form-check-label" for="form2Option2">True</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 3: If this planet were to disappear, Earth would be in a much greater risk of being hit by an asteroid?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form3" id="form3Option1" value="Mars">
+                    <label class="form-check-label" for="form3Option1">Mars</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form3" id="form3Option2" value="Jupiter">
+                    <label class="form-check-label" for="form3Option2">Jupiter</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form3" id="form3Option3" value="Mercury">
+                    <label class="form-check-label" for="form3Option3">Mercury</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form3" id="form3Option4" value="Neptune">
+                    <label class="form-check-label" for="form3Option4">Neptune</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 4: How many moons does mars have?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form4" id="form4Option1" value="1">
+                    <label class="form-check-label" for="form1Option1">1</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form4" id="form4Option2" value="2">
+                    <label class="form-check-label" for="form1Option2">2</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form4" id="form4Option3" value="3">
+                    <label class="form-check-label" for="form1Option1">3</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form4" id="form4Option4" value="4">
+                    <label class="form-check-label" for="form1Option2">4</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 5: What is the lifespan of a red dwarf star?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form5" id="form5Option1" value="millions of years">
+                    <label class="form-check-label" for="form1Option1">millions of years</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form5" id="form5Option2" value="billions of years">
+                    <label class="form-check-label" for="form1Option2">billions of years</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form5" id="form5Option3" value="trillions of years">
+                    <label class="form-check-label" for="form1Option1">trillions of years</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form5" id="form5Option4" value="quadrillions of years">
+                    <label class="form-check-label" for="form1Option2">quadrillions of years</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 6: What is the visible part of the Sun called?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form6" id="form6Option1" value="The Photosphere">
+                    <label class="form-check-label" for="form1Option1">The Photosphere</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form6" id="form6Option2" value="The Stratosphere">
+                    <label class="form-check-label" for="form1Option2">The Stratosphere</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form6" id="form6Option3" value="The Lithosphere">
+                    <label class="form-check-label" for="form1Option1">The Lithosphere</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form6" id="form6Option4" value="The Atmosphere">
+                    <label class="form-check-label" for="form1Option2">The Atmosphere</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 7: What makes a planet a dwarf planet?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form7" id="form7Option1" value="Size & Shape">
+                    <label class="form-check-label" for="form1Option1">Size & Shape</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form7" id="form7Option2" value="Color">
+                    <label class="form-check-label" for="form1Option2">Color</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form7" id="form7Option3" value="Distance from The Sun">
+                    <label class="form-check-label" for="form1Option1">Distance from The Sun</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form7" id="form7Option4" value="A Lack of Atmosphere">
+                    <label class="form-check-label" for="form1Option2">A Lack of Atmosphere</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 8: After the Moon, what is the brightest object in the night sky?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form8" id="form8Option1" value="Jupiter">
+                    <label class="form-check-label" for="form1Option1">Jupiter</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form8" id="form8Option2" value="Saturn">
+                    <label class="form-check-label" for="form1Option2">Saturn</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form8" id="form8Option3" value="Venus">
+                    <label class="form-check-label" for="form1Option1">Venus</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form8" id="form8Option4" value="Mars">
+                    <label class="form-check-label" for="form1Option2">Mars</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 9: The main asteroid belt in our solar system lies between the orbits of which 2 planets?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form9" id="form9Option1" value="Mercury & Venus">
+                    <label class="form-check-label" for="form1Option1">Mercury & Venus</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form9" id="form9Option2" value="Mars & Jupiter">
+                    <label class="form-check-label" for="form1Option2">Mars & Jupiter</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form9" id="form9Option3" value="Saturn & Jupiter">
+                    <label class="form-check-label" for="form1Option1">Saturn & Jupiter</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form9" id="form9Option4" value="Saturn & Uranus">
+                    <label class="form-check-label" for="form1Option2">Saturn & Uranus</label>
+                </div>
+            </div>
+            <div>
+                <h5>Question 10: The atmosphere of Mars is a lot thinner than on Earth and is made up of 2.8% nitrogen, 2% argon, less than 1% oxygen and 95% of which other gas?</h5>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form10" id="form10Option1" value="Hydrogen">
+                    <label class="form-check-label" for="form1Option1">Hydrogen</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form10" id="form10Option2" value="Carbon Monoxide">
+                    <label class="form-check-label" for="form1Option2">Carbon Monoxide</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form10" id="form10Option3" value="Helium">
+                    <label class="form-check-label" for="form1Option1">Helium</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="Form10" id="form10Option4" value="Carbon Dioxide">
+                    <label class="form-check-label" for="form1Option2">Carbon Dioxide</label>
+                </div>
+            </div>
+            <button id="test_button" type="button" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div id="test_div" class="center"></div>
+{% endblock %}
