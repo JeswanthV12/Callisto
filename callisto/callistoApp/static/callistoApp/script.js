@@ -1,13 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
     for (let i = 0; i < document.querySelectorAll('.btn-danger').length; i++) {
-        // var handler = function() {
-        //     alert('hi');
-        //     document.querySelectorAll('.btn-danger')[i].removeEventListener('click', handler, true);
-        // };
-        
-        // document.querySelectorAll('.btn-danger')[i].addEventListener('click', handler, true);
-
         let count = 0;
 
         document.querySelectorAll('.btn-danger')[i].onclick = () => {
@@ -54,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function UseApiRequest() {
     // api key
-    let API_KEY = "hXWDAGPSwFKXPB376EtRkBLDSW4q53Diweix45wA";
+    let API_KEY = KEY;
 
     // array for mars feature
     let array = [];
@@ -85,21 +78,6 @@ function UseApiRequest() {
     fetch("https://fdo.rocketlaunch.live/json/launches/next/5")
     .then(response => response.json())
     .then(data => launches(data))
-
-    // fetch mars pictures and push to array
-    // fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${API_KEY}`)
-    // .then(response => response.json())
-    // .then(data => array.push(data))
-
-    // fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/opportunity/photos?sol=1000&api_key=${API_KEY}`)
-    // .then(response => response.json())
-    // .then(data => array.push(data))
-
-    // fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=1000&api_key=${API_KEY}`)
-    // .then(response => response.json())
-    // .then(data => array.push(data))
-    
-    // mars(array);
 }
             
 function imageOfDay(data) {
